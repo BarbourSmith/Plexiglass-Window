@@ -14,14 +14,19 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1741646549679,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": 1741647030572
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
             "atomType": "Molecule",
             "name": "Sphere",
-            "x": 0.26587301587301587,
-            "y": 0.5125348189415042,
+            "x": 0.2605820105820106,
+            "y": 0.3788300835654596,
             "uniqueID": 1741646560918,
             "ioValues": [],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -33,14 +38,19 @@
                     "x": 0.98,
                     "y": 0.5,
                     "uniqueID": 1741646560983,
-                    "ioValues": [],
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": 1741646737793
+                        }
+                    ],
                     "description": "Connect geometry here to make it available in the next level up. "
                 },
                 {
                     "atomType": "GitHubMolecule",
                     "name": "Sphere",
-                    "x": 0.15674603174603174,
-                    "y": 0.39275766016713093,
+                    "x": 0.1626984126984127,
+                    "y": 0.5348189415041783,
                     "uniqueID": 1741646583720,
                     "ioValues": [
                         {
@@ -144,8 +154,8 @@
                 {
                     "atomType": "Rectangle",
                     "name": "Rectangle",
-                    "x": 0.24801587301587302,
-                    "y": 0.7409470752089137,
+                    "x": 0.13359788359788358,
+                    "y": 0.8356545961002785,
                     "uniqueID": 1741646679371,
                     "ioValues": [
                         {
@@ -162,8 +172,8 @@
                 {
                     "atomType": "Extrude",
                     "name": "Extrude",
-                    "x": 0.41865079365079366,
-                    "y": 0.7715877437325905,
+                    "x": 0.3082010582010582,
+                    "y": 0.8161559888579387,
                     "uniqueID": 1741646700495,
                     "ioValues": [
                         {
@@ -180,8 +190,8 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.5105820105820106,
-                    "y": 0.7186629526462396,
+                    "x": 0.45833333333333337,
+                    "y": 0.8495821727019498,
                     "uniqueID": 1741646708747,
                     "ioValues": [
                         {
@@ -206,8 +216,8 @@
                 {
                     "atomType": "Difference",
                     "name": "Difference",
-                    "x": 0.5753968253968255,
-                    "y": 0.39275766016713093,
+                    "x": 0.7559523809523809,
+                    "y": 0.7019498607242339,
                     "uniqueID": 1741646737793,
                     "ioValues": [
                         {
@@ -224,13 +234,13 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
-                    "x": 0.38095238095238093,
-                    "y": 0.33147632311977715,
+                    "x": 0.5085978835978836,
+                    "y": 0.5069637883008357,
                     "uniqueID": 1741646803186,
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": 1741646583720
+                            "ioValue": 1741646930309
                         },
                         {
                             "name": "xDist",
@@ -246,15 +256,138 @@
                         }
                     ],
                     "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "GitHubMolecule",
+                    "name": "Sphere",
+                    "x": 0.2268518518518519,
+                    "y": 0.2562674094707521,
+                    "uniqueID": 1741646878971,
+                    "ioValues": [
+                        {
+                            "name": "Radius",
+                            "ioValue": 740
+                        }
+                    ],
+                    "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+                    "topLevel": false,
+                    "allAtoms": [
+                        {
+                            "atomType": "Output",
+                            "name": "Output",
+                            "x": 0.98,
+                            "y": 0.5,
+                            "uniqueID": 1741646879498,
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": 1741646879374
+                                }
+                            ],
+                            "description": "Connect geometry here to make it available in the next level up. "
+                        },
+                        {
+                            "atomType": "Code",
+                            "name": "Code",
+                            "x": 0.45804540967423496,
+                            "y": 0.5090909090909091,
+                            "uniqueID": 1741646879374,
+                            "ioValues": [
+                                {
+                                    "name": "radius",
+                                    "ioValue": 740
+                                }
+                            ],
+                            "description": "Defines a Replicad code block.",
+                            "codeVersion": 1,
+                            "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+                        },
+                        {
+                            "atomType": "Input",
+                            "name": "Radius",
+                            "x": 0.04,
+                            "y": 0.5944272445820433,
+                            "uniqueID": 1741646879568,
+                            "ioValues": [],
+                            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+                            "type": "number"
+                        },
+                        {
+                            "atomType": "Constant",
+                            "name": "Constant",
+                            "x": 0.24709302325581398,
+                            "y": 0.8575851393188855,
+                            "uniqueID": 1741646879554,
+                            "ioValues": [],
+                            "description": "Defines a mathematical constant.",
+                            "value": 10
+                        }
+                    ],
+                    "allConnectors": [
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "number or geometry",
+                            "ap2Primary": false,
+                            "ap1ID": 1741646879374,
+                            "ap2ID": 1741646879498
+                        },
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "radius",
+                            "ap2Primary": false,
+                            "ap1ID": 1741646879568,
+                            "ap2ID": 1741646879374
+                        }
+                    ],
+                    "parentRepo": {
+                        "repoName": "Sphere",
+                        "dateCreated": "2024-11-13T19:37:04Z",
+                        "readMe": "https://raw.githubusercontent.com/alzatin/Sphere/master/README.md?sanitize=true",
+                        "yyyy": 2025,
+                        "topMoleculeID": 1731526624936,
+                        "topics": [],
+                        "githubMoleculesUsed": [],
+                        "html_url": "https://github.com/BarbourSmith/Sphere",
+                        "parentRepo": "BarbourSmith/Sphere",
+                        "forks": 0,
+                        "dateModified": "03/05/2025",
+                        "ranking": 0,
+                        "searchField": "sphere alzatin",
+                        "owner": "alzatin",
+                        "description": "Creates a sphere from the input radius",
+                        "svgURL": "https://raw.githubusercontent.com/alzatin/Sphere/master/project.svg?sanitize=true",
+                        "contentURL": "https://raw.githubusercontent.com/alzatin/Sphere/master/project.abundance?sanitize=true"
+                    },
+                    "unitsKey": "Inches",
+                    "fileTypeVersion": 1,
+                    "compiledBom": []
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.41203703703703703,
+                    "y": 0.40668523676880225,
+                    "uniqueID": 1741646930309,
+                    "ioValues": [
+                        {
+                            "name": "geometry2",
+                            "ioValue": 1741646878971
+                        },
+                        {
+                            "name": "geometry1",
+                            "ioValue": 1741646583720
+                        }
+                    ],
+                    "description": "Subtracts shape two from shape one."
                 }
             ],
             "allConnectors": [
                 {
                     "ap1Name": "Geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
                     "ap1ID": 1741646583720,
-                    "ap2ID": 1741646803186
+                    "ap2ID": 1741646930309
                 },
                 {
                     "ap1Name": "geometry",
@@ -279,20 +412,41 @@
                 },
                 {
                     "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 1741646737793,
+                    "ap2ID": 1741646560983
+                },
+                {
+                    "ap1Name": "geometry",
                     "ap2Name": "geometry1",
                     "ap2Primary": false,
                     "ap1ID": 1741646803186,
                     "ap2ID": 1741646737793
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": 1741646878971,
+                    "ap2ID": 1741646930309
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1741646930309,
+                    "ap2ID": 1741646803186
                 }
             ],
             "fileTypeVersion": 1,
-            "compiledBom": {}
+            "compiledBom": []
         },
         {
             "atomType": "Molecule",
             "name": "Lip",
-            "x": 0.30952380952380953,
-            "y": 0.7827298050139275,
+            "x": 0.2486772486772487,
+            "y": 0.6991643454038997,
             "uniqueID": 1741646567223,
             "ioValues": [],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -311,11 +465,41 @@
             "allConnectors": [],
             "fileTypeVersion": 1,
             "compiledBom": {}
+        },
+        {
+            "atomType": "Color",
+            "name": "Color",
+            "x": 0.7347883597883599,
+            "y": 0.37325905292479106,
+            "uniqueID": 1741647030572,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1741646560918
+                }
+            ],
+            "description": "Changes the color of the shape.",
+            "selectedColorIndex": 22
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1741646560918,
+            "ap2ID": 1741647030572
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1741647030572,
+            "ap2ID": 1741646549679
+        }
+    ],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
-    "compiledBom": {},
+    "compiledBom": [],
     "filetypeVersion": 1
 }
