@@ -460,9 +460,130 @@
                     "uniqueID": 1741646567324,
                     "ioValues": [],
                     "description": "Connect geometry here to make it available in the next level up. "
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.14682539682539683,
+                    "y": 0.4094707520891365,
+                    "uniqueID": 1741647358830,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 1600
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.11706349206349206,
+                    "y": 0.7548746518105849,
+                    "uniqueID": 1741647372018,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 1580
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.22156084656084654,
+                    "y": 0.6239554317548747,
+                    "uniqueID": 1741647381095,
+                    "ioValues": [
+                        {
+                            "name": "geometry2",
+                            "ioValue": 1741647372018
+                        },
+                        {
+                            "name": "geometry1",
+                            "ioValue": 1741647358830
+                        }
+                    ],
+                    "description": "Subtracts shape two from shape one."
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.3353174603174603,
+                    "y": 0.36768802228412256,
+                    "uniqueID": 1741647505722,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 1575
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.35383597883597884,
+                    "y": 0.6406685236768802,
+                    "uniqueID": 1741647505215,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 1555
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.48148148148148145,
+                    "y": 0.6183844011142061,
+                    "uniqueID": 1741647505613,
+                    "ioValues": [
+                        {
+                            "name": "geometry2",
+                            "ioValue": 1741647505215
+                        },
+                        {
+                            "name": "geometry1",
+                            "ioValue": 1741647505722
+                        }
+                    ],
+                    "description": "Subtracts shape two from shape one."
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
+                    "ap1ID": 1741647358830,
+                    "ap2ID": 1741647381095
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": 1741647372018,
+                    "ap2ID": 1741647381095
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
+                    "ap1ID": 1741647505722,
+                    "ap2ID": 1741647505613
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": 1741647505215,
+                    "ap2ID": 1741647505613
+                }
+            ],
             "fileTypeVersion": 1,
             "compiledBom": {}
         },
