@@ -25,8 +25,8 @@
         {
             "atomType": "Molecule",
             "name": "Sphere",
-            "x": 0.2605820105820106,
-            "y": 0.3788300835654596,
+            "x": 0.18121693121693122,
+            "y": 0.298050139275766,
             "uniqueID": 1741646560918,
             "ioValues": [],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -444,9 +444,9 @@
         },
         {
             "atomType": "Molecule",
-            "name": "Lip",
-            "x": 0.2486772486772487,
-            "y": 0.6991643454038997,
+            "name": "Outer Lip",
+            "x": 0.1488095238095238,
+            "y": 0.6824512534818942,
             "uniqueID": 1741646567223,
             "ioValues": [],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -458,14 +458,19 @@
                     "x": 0.98,
                     "y": 0.5,
                     "uniqueID": 1741646567324,
-                    "ioValues": [],
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": 1741647664927
+                        }
+                    ],
                     "description": "Connect geometry here to make it available in the next level up. "
                 },
                 {
                     "atomType": "Circle",
                     "name": "Circle",
-                    "x": 0.14682539682539683,
-                    "y": 0.4094707520891365,
+                    "x": 0.1316137566137566,
+                    "y": 0.2813370473537604,
                     "uniqueID": 1741647358830,
                     "ioValues": [
                         {
@@ -490,33 +495,15 @@
                     "description": "Creates a new circle."
                 },
                 {
-                    "atomType": "Difference",
-                    "name": "Difference",
-                    "x": 0.22156084656084654,
-                    "y": 0.6239554317548747,
-                    "uniqueID": 1741647381095,
-                    "ioValues": [
-                        {
-                            "name": "geometry2",
-                            "ioValue": 1741647372018
-                        },
-                        {
-                            "name": "geometry1",
-                            "ioValue": 1741647358830
-                        }
-                    ],
-                    "description": "Subtracts shape two from shape one."
-                },
-                {
                     "atomType": "Circle",
                     "name": "Circle",
-                    "x": 0.3353174603174603,
-                    "y": 0.36768802228412256,
+                    "x": 0.25925925925925924,
+                    "y": 0.15598885793871867,
                     "uniqueID": 1741647505722,
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 1575
+                            "ioValue": 1550
                         }
                     ],
                     "description": "Creates a new circle."
@@ -524,31 +511,153 @@
                 {
                     "atomType": "Circle",
                     "name": "Circle",
-                    "x": 0.35383597883597884,
-                    "y": 0.6406685236768802,
+                    "x": 0.22156084656084654,
+                    "y": 0.7883008356545962,
                     "uniqueID": 1741647505215,
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 1555
+                            "ioValue": 1530
                         }
                     ],
                     "description": "Creates a new circle."
                 },
                 {
-                    "atomType": "Difference",
-                    "name": "Difference",
-                    "x": 0.48148148148148145,
-                    "y": 0.6183844011142061,
-                    "uniqueID": 1741647505613,
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.35383597883597884,
+                    "y": 0.871866295264624,
+                    "uniqueID": 1741647593519,
                     "ioValues": [
                         {
-                            "name": "geometry2",
+                            "name": "geometry",
                             "ioValue": 1741647505215
                         },
                         {
-                            "name": "geometry1",
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": -20
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.419973544973545,
+                    "y": 0.37325905292479106,
+                    "uniqueID": 1741647627402,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
                             "ioValue": 1741647505722
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": -20
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Loft",
+                    "name": "Loft",
+                    "x": 0.5191798941798942,
+                    "y": 0.4094707520891365,
+                    "uniqueID": 1741647635987,
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": 1741647358830
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": 1741647627402
+                        },
+                        {
+                            "name": "Shape 3",
+                            "ioValue": ""
+                        },
+                        {
+                            "name": "Shape 1",
+                            "ioValue": 1741647358830
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": 1741647627402
+                        },
+                        {
+                            "name": "Shape 3",
+                            "ioValue": ""
+                        }
+                    ],
+                    "description": "Joins two or more shapes into a single solid by filling in the space between them. Also called 'hull'",
+                    "closedSelection": 0
+                },
+                {
+                    "atomType": "Loft",
+                    "name": "Loft",
+                    "x": 0.5191798941798942,
+                    "y": 0.7883008356545962,
+                    "uniqueID": 1741647653193,
+                    "ioValues": [
+                        {
+                            "name": "Shape 1",
+                            "ioValue": 1741647372018
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": 1741647593519
+                        },
+                        {
+                            "name": "Shape 3",
+                            "ioValue": ""
+                        },
+                        {
+                            "name": "Shape 1",
+                            "ioValue": 1741647372018
+                        },
+                        {
+                            "name": "Shape 2",
+                            "ioValue": 1741647593519
+                        },
+                        {
+                            "name": "Shape 3",
+                            "ioValue": ""
+                        }
+                    ],
+                    "description": "Joins two or more shapes into a single solid by filling in the space between them. Also called 'hull'",
+                    "closedSelection": 0
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.6501322751322751,
+                    "y": 0.5125348189415042,
+                    "uniqueID": 1741647664927,
+                    "ioValues": [
+                        {
+                            "name": "geometry2",
+                            "ioValue": 1741647653193
+                        },
+                        {
+                            "name": "geometry1",
+                            "ioValue": 1741647635987
                         }
                     ],
                     "description": "Subtracts shape two from shape one."
@@ -557,35 +666,70 @@
             "allConnectors": [
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "geometry1",
+                    "ap2Name": "Shape 1",
                     "ap2Primary": false,
                     "ap1ID": 1741647358830,
-                    "ap2ID": 1741647381095
+                    "ap2ID": 1741647635987
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "geometry2",
+                    "ap2Name": "Shape 1",
                     "ap2Primary": false,
                     "ap1ID": 1741647372018,
-                    "ap2ID": 1741647381095
+                    "ap2ID": 1741647653193
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1741647505722,
+                    "ap2ID": 1741647627402
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1741647505215,
+                    "ap2ID": 1741647593519
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": 1741647593519,
+                    "ap2ID": 1741647653193
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": 1741647627402,
+                    "ap2ID": 1741647635987
                 },
                 {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry1",
                     "ap2Primary": false,
-                    "ap1ID": 1741647505722,
-                    "ap2ID": 1741647505613
+                    "ap1ID": 1741647635987,
+                    "ap2ID": 1741647664927
                 },
                 {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry2",
                     "ap2Primary": false,
-                    "ap1ID": 1741647505215,
-                    "ap2ID": 1741647505613
+                    "ap1ID": 1741647653193,
+                    "ap2ID": 1741647664927
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 1741647664927,
+                    "ap2ID": 1741646567324
                 }
             ],
             "fileTypeVersion": 1,
-            "compiledBom": {}
+            "compiledBom": []
         },
         {
             "atomType": "Color",
@@ -601,6 +745,84 @@
             ],
             "description": "Changes the color of the shape.",
             "selectedColorIndex": 22
+        },
+        {
+            "atomType": "Molecule",
+            "name": "Inner Lip",
+            "x": 0.29034391534391535,
+            "y": 0.777158774373259,
+            "uniqueID": 1741647699776,
+            "ioValues": [],
+            "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.98,
+                    "y": 0.5,
+                    "uniqueID": 1741647700089,
+                    "ioValues": [],
+                    "description": "Connect geometry here to make it available in the next level up. "
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.21825396825396826,
+                    "y": 0.6183844011142061,
+                    "uniqueID": 1741647724264,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 1530
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.20502645502645506,
+                    "y": 0.3537604456824513,
+                    "uniqueID": 1741647733481,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 1400
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.3392857142857143,
+                    "y": 0.5905292479108635,
+                    "uniqueID": 1741647825194,
+                    "ioValues": [
+                        {
+                            "name": "geometry2",
+                            "ioValue": ""
+                        },
+                        {
+                            "name": "geometry1",
+                            "ioValue": 1741647724264
+                        }
+                    ],
+                    "description": "Subtracts shape two from shape one."
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
+                    "ap1ID": 1741647724264,
+                    "ap2ID": 1741647825194
+                }
+            ],
+            "fileTypeVersion": 1,
+            "compiledBom": {}
         }
     ],
     "allConnectors": [
