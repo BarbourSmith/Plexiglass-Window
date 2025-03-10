@@ -6,5 +6,8 @@
 
 
 
- 
+ The measurements seem to indicate that this should be 1400
+
+
+
 
