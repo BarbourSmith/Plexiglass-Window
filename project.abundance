@@ -14,19 +14,14 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1741646549679,
-            "ioValues": [
-                {
-                    "name": "number or geometry",
-                    "ioValue": 1741647030572
-                }
-            ],
+            "ioValues": [],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
             "atomType": "Molecule",
             "name": "Sphere",
             "x": 0.19378306878306878,
-            "y": 0.3175487465181059,
+            "y": 0.3324022346368715,
             "uniqueID": 1741646560918,
             "ioValues": [],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -45,111 +40,6 @@
                         }
                     ],
                     "description": "Connect geometry here to make it available in the next level up. "
-                },
-                {
-                    "atomType": "GitHubMolecule",
-                    "name": "Sphere",
-                    "x": 0.1626984126984127,
-                    "y": 0.5348189415041783,
-                    "uniqueID": 1741646583720,
-                    "ioValues": [
-                        {
-                            "name": "Radius",
-                            "ioValue": 750
-                        }
-                    ],
-                    "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
-                    "topLevel": false,
-                    "allAtoms": [
-                        {
-                            "atomType": "Output",
-                            "name": "Output",
-                            "x": 0.98,
-                            "y": 0.5,
-                            "uniqueID": 1741646583813,
-                            "ioValues": [
-                                {
-                                    "name": "number or geometry",
-                                    "ioValue": 1741646584054
-                                }
-                            ],
-                            "description": "Connect geometry here to make it available in the next level up. "
-                        },
-                        {
-                            "atomType": "Code",
-                            "name": "Code",
-                            "x": 0.45804540967423496,
-                            "y": 0.5090909090909091,
-                            "uniqueID": 1741646584054,
-                            "ioValues": [
-                                {
-                                    "name": "radius",
-                                    "ioValue": 750
-                                }
-                            ],
-                            "description": "Defines a Replicad code block.",
-                            "codeVersion": 1,
-                            "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
-                        },
-                        {
-                            "atomType": "Input",
-                            "name": "Radius",
-                            "x": 0.04,
-                            "y": 0.5944272445820433,
-                            "uniqueID": 1741646583643,
-                            "ioValues": [],
-                            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
-                            "type": "number"
-                        },
-                        {
-                            "atomType": "Constant",
-                            "name": "Constant",
-                            "x": 0.24709302325581398,
-                            "y": 0.8575851393188855,
-                            "uniqueID": 1741646583590,
-                            "ioValues": [],
-                            "description": "Defines a mathematical constant.",
-                            "value": 10
-                        }
-                    ],
-                    "allConnectors": [
-                        {
-                            "ap1Name": "geometry",
-                            "ap2Name": "number or geometry",
-                            "ap2Primary": false,
-                            "ap1ID": 1741646584054,
-                            "ap2ID": 1741646583813
-                        },
-                        {
-                            "ap1Name": "number or geometry",
-                            "ap2Name": "radius",
-                            "ap2Primary": false,
-                            "ap1ID": 1741646583643,
-                            "ap2ID": 1741646584054
-                        }
-                    ],
-                    "parentRepo": {
-                        "repoName": "Sphere",
-                        "dateCreated": "2024-11-13T19:37:04Z",
-                        "readMe": "https://raw.githubusercontent.com/alzatin/Sphere/master/README.md?sanitize=true",
-                        "yyyy": 2025,
-                        "topMoleculeID": 1731526624936,
-                        "topics": [],
-                        "githubMoleculesUsed": [],
-                        "html_url": "https://github.com/BarbourSmith/Sphere",
-                        "parentRepo": "BarbourSmith/Sphere",
-                        "forks": 0,
-                        "dateModified": "03/05/2025",
-                        "ranking": 0,
-                        "searchField": "sphere alzatin",
-                        "owner": "alzatin",
-                        "description": "Creates a sphere from the input radius",
-                        "svgURL": "https://raw.githubusercontent.com/alzatin/Sphere/master/project.svg?sanitize=true",
-                        "contentURL": "https://raw.githubusercontent.com/alzatin/Sphere/master/project.abundance?sanitize=true"
-                    },
-                    "unitsKey": "Inches",
-                    "fileTypeVersion": 1,
-                    "compiledBom": []
                 },
                 {
                     "atomType": "Rectangle",
@@ -221,12 +111,12 @@
                     "uniqueID": 1741646737793,
                     "ioValues": [
                         {
-                            "name": "geometry2",
-                            "ioValue": 1741646708747
-                        },
-                        {
                             "name": "geometry1",
                             "ioValue": 1741646803186
+                        },
+                        {
+                            "name": "geometry2",
+                            "ioValue": 1741646708747
                         }
                     ],
                     "description": "Subtracts shape two from shape one."
@@ -258,15 +148,33 @@
                     "description": "Moves a shape laterally in X, Y, Z."
                 },
                 {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.41203703703703703,
+                    "y": 0.40668523676880225,
+                    "uniqueID": 1741646930309,
+                    "ioValues": [
+                        {
+                            "name": "geometry1",
+                            "ioValue": "8df0611c-3ab9-4f19-be88-f3c3ae07e260"
+                        },
+                        {
+                            "name": "geometry2",
+                            "ioValue": "325b710b-5c4c-4834-b6d4-1317299167c9"
+                        }
+                    ],
+                    "description": "Subtracts shape two from shape one."
+                },
+                {
                     "atomType": "GitHubMolecule",
                     "name": "Sphere",
-                    "x": 0.2222222222222222,
-                    "y": 0.23676880222841226,
-                    "uniqueID": 1741646878971,
+                    "x": 0.164021164021164,
+                    "y": 0.5279329608938548,
+                    "uniqueID": "8df0611c-3ab9-4f19-be88-f3c3ae07e260",
                     "ioValues": [
                         {
                             "name": "Radius",
-                            "ioValue": 740
+                            "ioValue": 750
                         }
                     ],
                     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -277,11 +185,11 @@
                             "name": "Output",
                             "x": 0.98,
                             "y": 0.5,
-                            "uniqueID": 1741646879498,
+                            "uniqueID": "be40d063-53db-48b1-ab7e-919807ae7a53",
                             "ioValues": [
                                 {
                                     "name": "number or geometry",
-                                    "ioValue": 1741646879374
+                                    "ioValue": "a9f5d08d-307b-4aad-999e-b4312436cd3e"
                                 }
                             ],
                             "description": "Connect geometry here to make it available in the next level up. "
@@ -291,23 +199,23 @@
                             "name": "Code",
                             "x": 0.45804540967423496,
                             "y": 0.5090909090909091,
-                            "uniqueID": 1741646879374,
+                            "uniqueID": "a9f5d08d-307b-4aad-999e-b4312436cd3e",
                             "ioValues": [
                                 {
                                     "name": "radius",
-                                    "ioValue": 740
+                                    "ioValue": 10
                                 }
                             ],
                             "description": "Defines a Replicad code block.",
                             "codeVersion": 1,
-                            "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+                            "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new replicad.Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
                         },
                         {
                             "atomType": "Input",
                             "name": "Radius",
-                            "x": 0.04,
+                            "x": 0.0264,
                             "y": 0.5944272445820433,
-                            "uniqueID": 1741646879568,
+                            "uniqueID": "76687085-a139-4521-b069-9e37802efcdc",
                             "ioValues": [],
                             "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
                             "type": "number"
@@ -317,7 +225,7 @@
                             "name": "Constant",
                             "x": 0.24709302325581398,
                             "y": 0.8575851393188855,
-                            "uniqueID": 1741646879554,
+                            "uniqueID": "d7860805-bddf-425f-85f0-e2491c1e6483",
                             "ioValues": [],
                             "description": "Defines a mathematical constant.",
                             "value": 10
@@ -328,15 +236,15 @@
                             "ap1Name": "geometry",
                             "ap2Name": "number or geometry",
                             "ap2Primary": false,
-                            "ap1ID": 1741646879374,
-                            "ap2ID": 1741646879498
+                            "ap1ID": "a9f5d08d-307b-4aad-999e-b4312436cd3e",
+                            "ap2ID": "be40d063-53db-48b1-ab7e-919807ae7a53"
                         },
                         {
                             "ap1Name": "number or geometry",
                             "ap2Name": "radius",
                             "ap2Primary": false,
-                            "ap1ID": 1741646879568,
-                            "ap2ID": 1741646879374
+                            "ap1ID": "76687085-a139-4521-b069-9e37802efcdc",
+                            "ap2ID": "a9f5d08d-307b-4aad-999e-b4312436cd3e"
                         }
                     ],
                     "parentRepo": {
@@ -363,32 +271,112 @@
                     "compiledBom": []
                 },
                 {
-                    "atomType": "Difference",
-                    "name": "Difference",
-                    "x": 0.41203703703703703,
-                    "y": 0.40668523676880225,
-                    "uniqueID": 1741646930309,
+                    "atomType": "GitHubMolecule",
+                    "name": "Sphere",
+                    "x": 0.21693121693121695,
+                    "y": 0.25139664804469275,
+                    "uniqueID": "325b710b-5c4c-4834-b6d4-1317299167c9",
                     "ioValues": [
                         {
-                            "name": "geometry2",
-                            "ioValue": 1741646878971
-                        },
-                        {
-                            "name": "geometry1",
-                            "ioValue": 1741646583720
+                            "name": "Radius",
+                            "ioValue": 740
                         }
                     ],
-                    "description": "Subtracts shape two from shape one."
+                    "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
+                    "topLevel": false,
+                    "allAtoms": [
+                        {
+                            "atomType": "Output",
+                            "name": "Output",
+                            "x": 0.98,
+                            "y": 0.5,
+                            "uniqueID": "6cdd0ccc-beca-41a1-971b-9afaac85c9fe",
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": "a9f9383d-4dc0-4e37-a6c0-ef3e1236ef5d"
+                                }
+                            ],
+                            "description": "Connect geometry here to make it available in the next level up. "
+                        },
+                        {
+                            "atomType": "Code",
+                            "name": "Code",
+                            "x": 0.45804540967423496,
+                            "y": 0.5090909090909091,
+                            "uniqueID": "a9f9383d-4dc0-4e37-a6c0-ef3e1236ef5d",
+                            "ioValues": [
+                                {
+                                    "name": "radius",
+                                    "ioValue": 10
+                                }
+                            ],
+                            "description": "Defines a Replicad code block.",
+                            "codeVersion": 1,
+                            "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new replicad.Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+                        },
+                        {
+                            "atomType": "Input",
+                            "name": "Radius",
+                            "x": 0.0264,
+                            "y": 0.5944272445820433,
+                            "uniqueID": "9b0ac316-f008-43c8-9731-98f7c1e19982",
+                            "ioValues": [],
+                            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+                            "type": "number"
+                        },
+                        {
+                            "atomType": "Constant",
+                            "name": "Constant",
+                            "x": 0.24709302325581398,
+                            "y": 0.8575851393188855,
+                            "uniqueID": "c1eda4b8-f1d9-4799-b504-d15ae040a997",
+                            "ioValues": [],
+                            "description": "Defines a mathematical constant.",
+                            "value": 10
+                        }
+                    ],
+                    "allConnectors": [
+                        {
+                            "ap1Name": "geometry",
+                            "ap2Name": "number or geometry",
+                            "ap2Primary": false,
+                            "ap1ID": "a9f9383d-4dc0-4e37-a6c0-ef3e1236ef5d",
+                            "ap2ID": "6cdd0ccc-beca-41a1-971b-9afaac85c9fe"
+                        },
+                        {
+                            "ap1Name": "number or geometry",
+                            "ap2Name": "radius",
+                            "ap2Primary": false,
+                            "ap1ID": "9b0ac316-f008-43c8-9731-98f7c1e19982",
+                            "ap2ID": "a9f9383d-4dc0-4e37-a6c0-ef3e1236ef5d"
+                        }
+                    ],
+                    "parentRepo": {
+                        "repoName": "Sphere",
+                        "dateCreated": "2024-11-13T19:37:04Z",
+                        "readMe": "https://raw.githubusercontent.com/alzatin/Sphere/master/README.md?sanitize=true",
+                        "yyyy": 2025,
+                        "topMoleculeID": 1731526624936,
+                        "topics": [],
+                        "githubMoleculesUsed": [],
+                        "html_url": "https://github.com/BarbourSmith/Sphere",
+                        "parentRepo": "BarbourSmith/Sphere",
+                        "forks": 0,
+                        "dateModified": "03/05/2025",
+                        "ranking": 0,
+                        "searchField": "sphere alzatin",
+                        "owner": "alzatin",
+                        "description": "Creates a sphere from the input radius",
+                        "svgURL": "https://raw.githubusercontent.com/alzatin/Sphere/master/project.svg?sanitize=true",
+                        "contentURL": "https://raw.githubusercontent.com/alzatin/Sphere/master/project.abundance?sanitize=true"
+                    },
+                    "unitsKey": "Inches",
+                    "fileTypeVersion": 1,
+                    "compiledBom": []
                 }
             ],
             "allConnectors": [
-                {
-                    "ap1Name": "Geometry",
-                    "ap2Name": "geometry1",
-                    "ap2Primary": false,
-                    "ap1ID": 1741646583720,
-                    "ap2ID": 1741646930309
-                },
                 {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry",
@@ -425,18 +413,25 @@
                     "ap2ID": 1741646737793
                 },
                 {
-                    "ap1Name": "Geometry",
-                    "ap2Name": "geometry2",
-                    "ap2Primary": false,
-                    "ap1ID": 1741646878971,
-                    "ap2ID": 1741646930309
-                },
-                {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry",
                     "ap2Primary": true,
                     "ap1ID": 1741646930309,
                     "ap2ID": 1741646803186
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
+                    "ap1ID": "8df0611c-3ab9-4f19-be88-f3c3ae07e260",
+                    "ap2ID": 1741646930309
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": "325b710b-5c4c-4834-b6d4-1317299167c9",
+                    "ap2ID": 1741646930309
                 }
             ],
             "fileTypeVersion": 1,
@@ -652,12 +647,12 @@
                     "uniqueID": 1741647664927,
                     "ioValues": [
                         {
-                            "name": "geometry2",
-                            "ioValue": 1741647653193
-                        },
-                        {
                             "name": "geometry1",
                             "ioValue": 1741647635987
+                        },
+                        {
+                            "name": "geometry2",
+                            "ioValue": 1741647653193
                         }
                     ],
                     "description": "Subtracts shape two from shape one."
@@ -839,12 +834,12 @@
                     "uniqueID": 1741647825194,
                     "ioValues": [
                         {
-                            "name": "geometry2",
-                            "ioValue": 1741647733481
-                        },
-                        {
                             "name": "geometry1",
                             "ioValue": 1741647724264
+                        },
+                        {
+                            "name": "geometry2",
+                            "ioValue": 1741647733481
                         }
                     ],
                     "description": "Subtracts shape two from shape one."
